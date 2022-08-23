@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device, initial-scale=1">
+    <title>#DigitalFuture</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            overflow-y: scroll;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #navbar {
+            overflow: hidden;
+            padding: 90px 10px;
+            transition: 0.4s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+        }
+
+        #navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+
+        #navbar #logo {
+            font-size: 35px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+        #navbar #logo:hover {
+            background-color: none !important;
+        }
+
+        #navbar a.link:hover {
+            background-color: rgba(221, 221, 221, 0.281);
+            color: white;
+        }
+
+        #navbar a.active {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        #navbar-right {
+            float: right;
+        }
+
+        @media screen and (max-width: 580px) {
+            #navbar {
+                padding: 20px 10px !important;
+            }
+
+            #navbar a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            #navbar-right {
+                float: none;
+            }
+
+
+
+        }
+
+        .alt-color {
+            background-color: rgb(207, 207, 207);
+        }
+
+        #home {
+            padding-top: 250px;
+        }
+
+        section {
+            padding: 70px 50px 50px 50px;
+
+        }
+
+        #games {
+            height: 800px;
+        }
+
+        #footer {
+            background-color: black;
+            color: #f1f1f1;
+            text-align: center;
+
+        }
+
+        .tab {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 30%;
+            height: 300px;
+        }
+
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 70%;
+            border-left: none;
+            height: 500px;
+        }
+
+        /* video background */
+        #background-video {
+            width: 100vw;
+            height: 229px;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 99;
+        }
+
+        section h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /*    Filter area          */
+
+        .filterDiv {
+            float: left;
+            margin: 10px;
+            display: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 40%;
+        }
+
+
+        .filterShow {
+            display: block;
+            background-color: white;
+        }
+
+        .filterContainer {
+            margin-top: 20px;
+            overflow: hidden;
+
+        }
+
+        /* Style the buttons */
+        .filterBtn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        .filterBtn :hover {
+            background-color: #ddd;
+        }
+
+        .filterBtn.active {
+            background-color: #666;
+            color: white;
+        }
+
+        .filterDivLink {
+            text-align: right;
+            padding: 10px;
+        }
+
+        .filterDivContainer {
+            padding: 0px 16px;
+        }
+
+        .singleline {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .multiline {
+            display: block;
+            display: -webkit-box;
+            margin: 0 auto;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="background-video" autoplay loop muted poster="assets/navbar-poster.png">
+        <source src="assets/video.mp4" type="video/mp4">
+    </video>
+    <div id="navbar">
+        <a href="#default" id="logo">#Digital Future</a>
+        <div id="navbar-right">
+            <a class="link" href="#home">Home</a>
+            <a class="link" href="#futureTech">Glimpse the future</a>
+            <a class="link" href="#games">Games</a>
+            <a class="link" href="#about">About</a>
+        </div>
+    </div>
+    </div>
+
+    <section id="home">
+        <p><b>The future of technology will be amazing, from holograms to hover cars, this will change life
+                forever!</b></p>
+        <p>We can predict that many things will change in the future. Some cars already have a self-driving function,
+            scientists believe it is safer this way, allowing less accidents. And probably by 2050 many families will
+            have home drones, which is basically a car that can fly and transport you to places quicker. School could
+            also be very different. Right now, because of the COVID-19 pandemic many students must do school online on
+            their iPad, laptop or desktop computer. In the future, school could be filled with smart computers and
+            holograms, but they probably still be encouraging students to go to school to enhance their social skills.
+        </p>
+        <p>In the future your dreams could be reality. This technology is being worked on in the present, like 3D
+            printing food
+            and make meat without animals to Space tourism and settling on planets like Mars. And scientists are sure
+            that VR and AR technology will prove
+            to be
+            one of the biggest innovations for the future in going to your class or work to being able to play games
+            without
+            a TV, PC or Console. People are already trying to make a 5G network for people around the world for faster
+            network
+            speeds. Maybe you could visit Mars in your bedroom without a screen but with holograms. This will prove
+            useful
+            for people in the future for education. This is will happen in the future! </p>
+    </section>
+    <section class="alt-color" id="futureTech">
+        <h2>Glimpse of the future</h2>
+
+        <div id="myBtnContainer" class="center">
+            <button class="filterBtn active" onclick="filterSelection('all')"> All</button>
+            <button class="filterBtn" onclick="filterSelection('education')"> Education</button>
+            <button class="filterBtn" onclick="filterSelection('medical')"> Medical</button>
+            <button class="filterBtn" onclick="filterSelection('transport')"> Transport</button>
+            <button class="filterBtn" onclick="filterSelection('sustainability')"> Sustainability</button>
+            <button class="filterBtn" onclick="filterSelection('social media')"> Social Media</button>
+            <button class="filterBtn" onclick="filterSelection('entertainment')"> Entertainment</button>
+        </div>
+
+        <div class="filterContainer center">
+            <div class="filterDiv medical">
+                <div class="filterDivContainer ">
+                    <h4>
+                        <div class="singleline">
+                            <b>Medical Booth</b>
+                        </div>
+                    </h4>
+
+                    <div class="multiline">
+                        <p>Pandemics, remote work services and AI have changed the common appearance of the medicine. If
+                            you
+                            feel sick, there is no need to visit health clinics with their numerous cabinets, labs and
+                            crowds of
+                            other
+                            sick people (inter-hospital spread of infections was one of the greatest dangers in previous
+                            years).
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/artworks/medical-booth" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv medical">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Doctors will be completely replaced by robots</b>
+                        </div>
+                    </h4>
+
+                    <div class="multiline">
+                        <p>Can you imagine what a visit to the doctor’s would look like in 20 or 30 years? It’s highly
+                            likely
+                            that, in the future, it will be very different to what we experience now. Medical
+                            technologies
+                            are
+                            developing rapidly and already actively helping doctors to make diagnoses. But what further
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/doctors-will-be-completely-replaced-by-robots"
+                        target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv medical">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Surrogate</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>The demand for fit and strong workforce has made surrogacy a much considered option for women
+                            pursuing a career in entertainment or any other highly competitive industry. (Surrogacy: A
+                            woman
+                            carrying another couple's fertilized eggs to term and giving birth to their baby in exchange
+                            for
+                            payment)
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/artworks/surrogate" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv medical">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>2050 Pandemic</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>By 2050, Artificial Intelligence will be integrated into most aspects of life, producing new
+                            efficiencies and enhancing human capacities. More than 20% of the world's population will
+                            carry
+                            some
+                            sort of chip implants in their bodies to enhance physical or cognitive capabilities, to
+                            monitor
+                            health.
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/2050-pandemic" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv medical">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>The Nano Fabrication age</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>Distributed manufacturing using Tech-Labs in the 2050s. Now also referred to as the Nano
+                            Fabrication
+                            age. In 2050, traditional factories producing millions of products no longer exist. These
+                            have
+                            been
+                            replaced by Tech-Labs (TLs) (see def below) fabricating products on demand. Global shipping
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href=" https://2050.earth/predictions/the-nano-fabrication-age" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv transport">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Salt Water Powered Cargo Ship Debute</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>The shipping industry, according to Project Drawdown, is forecast to grow 50-250% within the
+                            next
+                            30
+                            years. However, there are already significant impacts on marine life from the shipping
+                            industry,
+                            the
+                            main targets being whales and the water itself. Assisted by research, good technology and
+                            engineering:
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/salt-water-powered-cargo-ship-debute" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv transport">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Antiviral Sputnik</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p> In the past, space tech was unique and classified, so it was hard for an outsider to
+                            discover
+                            vulnerabilities in space control systems. That’s why hacker attacks on such targets were
+                            largely
+                            unsuccessful. The situation changed in the 2020s. In modern spacecraft, unique analog
+                            devices of
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/artworks/antiviral-sputnik" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv transport">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Motorboats & floating warehouse systems</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>A place suffered from flooding twice yearly &, while it was waiting for millions of dollars
+                            to
+                            improve the draining system, it should have developed automatically triggered motorboats &
+                            floating
+                            warehouses to be used once a flood alarm was activated. Once the river water level reaches a
+                            critical
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/motorboats-floating-warehouse-systems" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv transport">
+                <div class="filterDivContainer">
+
+                    <h4>
+                        <div class="singleline">
+                            <b>Vehicle Power Stations Will Be Obsolete as Electric Cars Will Be Powered by "Cloud
+                                Computing"</b>
+                        </div>
+                    </h4>
+
+                    <div class="multiline">
+                        <p>Since we're in the race to stop climate change & global warming, one of the main goals to
+                            achieve
+                            to
+                            win the race is to eliminate large amounts of CO² – & among the big producers of CO² are
+                            fossil-fueled cars. Many people see EVs (Electric Vehicles) as the alternative.
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/vehicle-power-stations-will-be-obsolete-as-electric-cars-will-have-its-power-come-from-cloud-computing"
+                        target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv sustainability">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>The Garbage Patch is shrinking because of bacteria, but do we have to stop them?</b>
+                        </div>
+                    </h4>
+
+                    <div class="multiline">
+                        <p>Since the discovery of the Great Pacific Garbage Patch in 1997, the already massive
+                            quantities of
+                            plastics and micro-plastics have grown even further in the area, strangling the local
+                            ecosystem.
+                            The
+                            garbage patch, now bigger in size than Alaska, has reportedly been shrinking in recent
+                            years,
+                            though.
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/the-garbage-patch-is-shrinking-because-of-bacteria-but-do-we-have-to-stop-them"
+                        target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv sustainability">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Algae Respiration Filters</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>Description: Massive stacks of bioengineered algae tower above a small Hawaiian harbor. These
+                            solar-powered wind and air filters produce additional oxygen while absorbing carbon. The
+                            algae
+                            are
+                            made to reproduce quickly and generate no alternative chemicals besides oxygen. This is the
+                            first of
+                            many experimental oxygen
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/algae-respiration-filters" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv social media">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Digital Landmarks</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>Indonesian culture is still quite strong in the future and is closely related to the digital
+                            era.
+                            The
+                            statues and monuments will remain there, in hologram form. High and modern buildings will be
+                            built
+                            for housing, but there will still be a touch of local culture in the buildings in the form
+                            of
+                            carvings,
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/digital-landmarks" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv social media">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Victim of your own success</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>Documentaries like "The Social Dilemma" show how former executives from technology
+                            corporations
+                            restate their fear about artificial intelligence's role in social media and the influence
+                            these
+                            platforms have on society. One concludes that the more you know about how the digital world
+                            works,
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/victim-of-your-own-success" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv social media">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Redefining reality</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>The metaverse is everywhere and contains almost everything: Your digital persona, all your
+                            social
+                            life, your favorite sources of entertainment, sports, your meetings and interactions at
+                            work,
+                            your
+                            favorite clothes and your NFT art. Most daily activities are performed by your virtual
+                            avatar in
+                            the
+                            metaverse.
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/redefining-reality" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv education">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>AI Mentors</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>In 2045, humans will actively interact with AI mentors. Those entities will be present in our
+                            lives
+                            from the very beginning, they will accompany our whole lives and will join us to navigate
+                            our
+                            coursework and personal life. They will teach, support, coach, and mentor us to achieve our
+                            life
+                            goals.
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/ai-mentors" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv education">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>The rise of Immersive Education</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>After years of disregard towards the importance of improving educational delivery, VR and
+                            machine
+                            learning are opening new doors to enhancing the learning experience by introducing immersive
+                            environments that enable reusable and cognitively easy ways of digesting content. ML tools
+                            allow
+                            for
+                            more efficient
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/rise-of-immersive-education" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv education">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Universities in their current form will cease to exist</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>It is the year 2050, and education has completely moved to an on-demand format. Universities
+                            in
+                            their
+                            current form have ceased to exist and will be retrofitted as makerspaces and
+                            "application-based
+                            learning" spaces. Universities will adapt to this incubator-style structure, so that
+                            students
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/universities-in-its-current-form-will-cease-to-exist"
+                        target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv education">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>Virtual education</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>As more and more people all over the world gain access to the Internet, schools will be
+                            slowly
+                            replaced by virtual educational environments hosting learners from everywhere. Students will
+                            be
+                            able
+                            to use all five senses for learning. Classrooms will be suited to match the student's
+                            individual
+                            learning
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/virtual-education" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv entertainment">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>The VR revolution comes to neural interfaces</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>VR technology has come a long way. Until the early 2020s, users had to slap on bulky helmets
+                            and
+                            squeeze into sensor suits. But progress never stands still. The helmets were replaced first
+                            by
+                            glasses, then lenses. Suits became electrode meshes. Now, in 2050, the industry is
+                            undergoing
+                            another revolution.
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/artworks/the-vr-revolution-comes-to-neural-interfaces" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv entertainment">
+                <div class="filterDivContainer">
+                    <h4>
+                        <div class="singleline">
+                            <b>The new era of virtual reality</b>
+                        </div>
+                    </h4>
+                    <div class="multiline">
+                        <p>While the launch of consumer-level Virtual Reality has gotten off to a slower start than some
+                            (myself
+                            included) expected, it is not going to fade into obscurity. As we continue to learn how to
+                            design
+                            games, experiences, and other apps for VR, it will slowly become more integrated into
+                            everyday
+                            life.
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a href="https://2050.earth/predictions/the-new-era-of-virtual-reality" target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="games">
+        <h2>Games</h2>
+        <div class="tab">
+            <button id="defaultOpen" class="tablinks" onclick="openGame(event, 'Game1')">Game1</button>
+            <button class="tablinks" onclick="openGame(event, 'Game2')">Game2</button>
+            <button class="tablinks" onclick="openGame(event, 'Game3')">Game3</button>
+        </div>
+        <div id="Game1" class="tabcontent">
+            <iframe width="660" height="408"
+                src="http://www.tynker.com/ide/v3?type=player&p=61410f644b63e10bf454582c&autoPlay=no" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+
+        <div id="Game2" class="tabcontent">
+            <h3>Game2</h3>
+            <p>Game link:</p>
+        </div>
+
+        <div id="Game3" class="tabcontent">
+            <h3>Game3</h3>
+            <p>Game link:</p>
+        </div>
+    </section>
+
+    <section class="alt-color" id="about">
+        <h2>Credits</h2>
+        <p>I’m on a mission to educate kids on how much we would rely on technology in the future and raise
+            awareness on future careers. Future technologies will be highly advanced, so we should know what to expect.
+            Technologies are already all around us, but in the future their will be a bigger variety. So I'm trying
+            explain to kids on what the future may hold. Jobs will also change largely. Many jobs today may not be
+            there in the future, like doctors and teachers to truck drivers and mathmaticians. We will require help
+            robots and machines so I'm wanting to show what jobs will be like in the future.</p>
+        <p>The things that helped accomplish my solution was the extraordinary site called 2050 Earth. It allows people
+            to learn and add predictions on the future. Some of the parts let you to look at the unique environment like
+            New York in 2050. You can take a glimpse into the future.</p>
+        <p>Another one of the things that helped me was W3 schools and Khan Academy. Khan Academy helped me learn the
+            basics of Java Script and CSS. W3 schools is where I learned the important parts of a website.</p>
+    </section>
+    <section id="footer"><b>#Digital Future</b> | Designed by Noah Bibin Markose</section>
+    </div>
+    <!-- filter section Script -->
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "filterShow");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "filterShow");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("filterBtn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <!-- website video and header -->
+    <script>
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+
+                document.getElementById("background-video").style.height = "109px";
+                document.getElementById("navbar").style.padding = "30px 10px";
+                document.getElementById("logo").style.fontSize = "25px";
+            } else {
+                document.getElementById("background-video").style.height = "209px";
+                document.getElementById("navbar").style.padding = "80px 10px";
+                document.getElementById("logo").style.fontSize = "35px";
+            }
+        }
+        function openGame(evt, gameName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(gameName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
