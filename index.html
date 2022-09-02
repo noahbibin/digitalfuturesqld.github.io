@@ -16,24 +16,60 @@
 
         body {
             margin: 0;
-            font-family: 'Montserrat', sans-serif !important; 
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: 500 !important;
             overflow-y: scroll;
 
         }
+
         button {
-        font-family:'Montserrat', sans-serif !important;
+            font-family: 'Montserrat', sans-serif !important;
         }
-        
+
         /* heading */
-        h1, h2, h3, h4, h5, h6 { margin:0; padding:0; color: #000;}
-        h1 { font-size:50px; line-height: 60px;}
-        h2 { font-size:35px; line-height:40px}
-        h3 { font-size:30px; line-height:35px}
-        h4 { font-size:25px; line-height:33px}
-        h5 { font-size:20px; line-height:30px}
-        h6 { font-size:18px; line-height:23px} 
-        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            color: #000;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        h2 {
+            font-size: 35px;
+            line-height: 40px;
+            padding-bottom: 20px;
+
+        }
+
+        h3 {
+            font-size: 30px;
+            line-height: 35px
+        }
+
+        h4 {
+            font-size: 25px;
+            line-height: 33px
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 30px
+        }
+
+        h6 {
+            font-size: 18px;
+            line-height: 23px
+        }
+
         .center {
             text-align: center;
         }
@@ -60,9 +96,10 @@
         }
 
         #navbar #logo {
-            font-size: 35px;
+            font-size: 50px;
             font-weight: bold;
             transition: 0.4s;
+            text-shadow: 2px 2px 8px #020202;
         }
 
         #navbar #logo:hover {
@@ -103,7 +140,7 @@
         }
 
         .alt-color {
-            background-color: rgb(207, 207, 207);
+            background-color: rgb(61, 61, 61);
         }
 
         #home {
@@ -165,11 +202,14 @@
         }
 
         /* video background */
-        #background-video {
-            width: 100vw;
-            height: 229px;
-            object-fit: cover;
+        #heder-video {
             position: fixed;
+        }
+
+        .background-video {
+            width: 100vw;
+            /* height: 229px; */
+            object-fit: cover;
             left: 0;
             right: 0;
             top: 0;
@@ -230,6 +270,7 @@
 
         .filterDivContainer {
             padding: 0px 16px;
+            margin-top: 15px;
         }
 
         .singleline {
@@ -247,18 +288,56 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        .fontGreen {
+            color: yellowgreen;
+        }
+
+        .fontWhite {
+            color: white;
+        }
+
+        .noMargin {
+            margin: 0px !important;
+        }
+
+        .noPadding {
+            padding: 0px !important;
+        }
+
+        #futureTransport {
+            background-color: #000;
+            padding-top: 70px;
+        }
+
+        .text-medium {
+            font-size: 20px !important;
+            line-height: 24px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .title-extra-large-2 {
+            font-size: 45px !important;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .text-blue-gray {
+            color: #919499;
+        }
     </style>
 </head>
 
 <body>
-    <video id="background-video" autoplay loop muted poster="assets/navbar-poster.png">
+    <video id="heder-video" class="background-video" height="229" autoplay loop muted poster="assets/navbar-poster.png">
         <source src="assets/video.mp4" type="video/mp4">
     </video>
     <div id="navbar">
         <a href="#default" id="logo">#Digital Future</a>
         <div id="navbar-right">
             <a class="link" href="#home">Home</a>
-            <a class="link" href="#futureTech">Glimpse the future</a>
+            <a class="link" href="#futureTech">Glimpse of the future</a>
             <a class="link" href="#games">Games</a>
             <a class="link" href="#about">About</a>
         </div>
@@ -266,32 +345,45 @@
     </div>
 
     <section id="home">
-        <p><b>The future of technology will be amazing, from holograms to hover cars, this will change life
-                forever!</b></p>
-        <p>We can predict that many things will change in the future. Some cars already have a self-driving function,
-            scientists believe it is safer this way, allowing less accidents. And probably by 2050 many families will
-            have home drones, which is basically a car that can fly and transport you to places quicker. School could
-            also be very different. Right now, because of the COVID-19 pandemic many students must do school online on
-            their iPad, laptop or desktop computer. In the future, school could be filled with smart computers and
-            holograms, but they probably still be encouraging students to go to school to enhance their social skills.
-        </p>
-        <p>In the future your dreams could be reality. This technology is being worked on in the present, like 3D
-            printing food
-            and make meat without animals to Space tourism and settling on planets like Mars. And scientists are sure
-            that VR and AR technology will prove
-            to be
-            one of the biggest innovations for the future in going to your class or work to being able to play games
-            without
-            a TV, PC or Console. People are already trying to make a 5G network for people around the world for faster
-            network
-            speeds. Maybe you could visit Mars in your bedroom without a screen but with holograms. This will prove
-            useful
-            for people in the future for education. This is will happen in the future! </p>
+        <div class="title-extra-large-2">
+            <p><b>The future of technology will be amazing, from holograms to hover cars, this will change life
+                    forever!</b></p>
+        </div>
+
+        <div class="text-medium">
+            <p>We can predict that many things will change in the future. Some cars already have a self-driving
+                function,
+                scientists believe it is safer this way, allowing less accidents. And probably by 2050 many families
+                will
+                have home drones, which is basically a car that can fly and transport you to places quicker. School
+                could
+                also be very different. Right now, because of the COVID-19 pandemic many students must do school online
+                on
+                their iPad, laptop or desktop computer. In the future, school could be filled with smart computers and
+                holograms, but they probably still be encouraging students to go to school to enhance their social
+                skills.
+            </p>
+            <p>In the future your dreams could be reality. This technology is being worked on in the present, like 3D
+                printing food
+                and make meat without animals to Space tourism and settling on planets like Mars. And scientists are
+                sure
+                that VR and AR technology will prove
+                to be
+                one of the biggest innovations for the future in going to your class or work to being able to play games
+                without
+                a TV, PC or Console. People are already trying to make a 5G network for people around the world for
+                faster
+                network
+                speeds. Maybe you could visit Mars in your bedroom without a screen but with holograms. This will prove
+                useful
+                for people in the future for education. This is will happen in the future! </p>
+        </div>
+
     </section>
     <section class="alt-color" id="futureTech">
-        <h2>Glimpse of the future</h2>
+        <h2 class="fontGreen">Glimpse of the future</h2>
 
-        <div id="myBtnContainer" class="center">
+        <div id="myBtnContainer" class="center btnContainer">
             <button class="filterBtn active" onclick="filterSelection('all')"> All</button>
             <button class="filterBtn" onclick="filterSelection('education')"> Education</button>
             <button class="filterBtn" onclick="filterSelection('medical')"> Medical</button>
@@ -304,11 +396,9 @@
         <div class="filterContainer center">
             <div class="filterDiv medical">
                 <div class="filterDivContainer ">
-                    <h4>
-                        <div class="singleline">
-                            <b>Medical Booth</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Medical Booth</b>
+                    </div>
 
                     <div class="multiline">
                         <p>Pandemics, remote work services and AI have changed the common appearance of the medicine. If
@@ -328,11 +418,10 @@
             </div>
             <div class="filterDiv medical">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Doctors will be completely replaced by robots</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Doctors will be completely replaced by robots</b>
+                    </div>
+
 
                     <div class="multiline">
                         <p>Can you imagine what a visit to the doctor’s would look like in 20 or 30 years? It’s highly
@@ -352,11 +441,10 @@
             </div>
             <div class="filterDiv medical">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Surrogate</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Surrogate</b>
+                    </div>
+
                     <div class="multiline">
                         <p>The demand for fit and strong workforce has made surrogacy a much considered option for women
                             pursuing a career in entertainment or any other highly competitive industry. (Surrogacy: A
@@ -374,11 +462,10 @@
             </div>
             <div class="filterDiv medical">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>2050 Pandemic</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>2050 Pandemic</b>
+                    </div>
+
                     <div class="multiline">
                         <p>By 2050, Artificial Intelligence will be integrated into most aspects of life, producing new
                             efficiencies and enhancing human capacities. More than 20% of the world's population will
@@ -397,11 +484,10 @@
             </div>
             <div class="filterDiv medical">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>The Nano Fabrication age</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>The Nano Fabrication age</b>
+                    </div>
+
                     <div class="multiline">
                         <p>Distributed manufacturing using Tech-Labs in the 2050s. Now also referred to as the Nano
                             Fabrication
@@ -419,11 +505,10 @@
             </div>
             <div class="filterDiv transport">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Salt Water Powered Cargo Ship Debute</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Salt Water Powered Cargo Ship Debute</b>
+                    </div>
+
                     <div class="multiline">
                         <p>The shipping industry, according to Project Drawdown, is forecast to grow 50-250% within the
                             next
@@ -443,11 +528,9 @@
             </div>
             <div class="filterDiv transport">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Antiviral Sputnik</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Antiviral Sputnik</b>
+                    </div>
                     <div class="multiline">
                         <p> In the past, space tech was unique and classified, so it was hard for an outsider to
                             discover
@@ -465,11 +548,10 @@
             </div>
             <div class="filterDiv transport">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Motorboats & floating warehouse systems</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Motorboats & floating warehouse systems</b>
+                    </div>
+
                     <div class="multiline">
                         <p>A place suffered from flooding twice yearly &, while it was waiting for millions of dollars
                             to
@@ -487,13 +569,10 @@
             </div>
             <div class="filterDiv transport">
                 <div class="filterDivContainer">
-
-                    <h4>
-                        <div class="singleline">
-                            <b>Vehicle Power Stations Will Be Obsolete as Electric Cars Will Be Powered by "Cloud
-                                Computing"</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Vehicle Power Stations Will Be Obsolete as Electric Cars Will Be Powered by "Cloud
+                            Computing"</b>
+                    </div>
 
                     <div class="multiline">
                         <p>Since we're in the race to stop climate change & global warming, one of the main goals to
@@ -512,11 +591,9 @@
             </div>
             <div class="filterDiv sustainability">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>The Garbage Patch is shrinking because of bacteria, but do we have to stop them?</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>The Garbage Patch is shrinking because of bacteria, but do we have to stop them?</b>
+                    </div>
 
                     <div class="multiline">
                         <p>Since the discovery of the Great Pacific Garbage Patch in 1997, the already massive
@@ -538,11 +615,10 @@
             </div>
             <div class="filterDiv sustainability">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Algae Respiration Filters</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Algae Respiration Filters</b>
+                    </div>
+
                     <div class="multiline">
                         <p>Description: Massive stacks of bioengineered algae tower above a small Hawaiian harbor. These
                             solar-powered wind and air filters produce additional oxygen while absorbing carbon. The
@@ -561,11 +637,9 @@
             </div>
             <div class="filterDiv social media">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Digital Landmarks</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Digital Landmarks</b>
+                    </div>
                     <div class="multiline">
                         <p>Indonesian culture is still quite strong in the future and is closely related to the digital
                             era.
@@ -585,11 +659,9 @@
             </div>
             <div class="filterDiv social media">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Victim of your own success</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Victim of your own success</b>
+                    </div>
                     <div class="multiline">
                         <p>Documentaries like "The Social Dilemma" show how former executives from technology
                             corporations
@@ -607,11 +679,10 @@
             </div>
             <div class="filterDiv social media">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Redefining reality</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Redefining reality</b>
+                    </div>
+
                     <div class="multiline">
                         <p>The metaverse is everywhere and contains almost everything: Your digital persona, all your
                             social
@@ -632,11 +703,9 @@
             </div>
             <div class="filterDiv education">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>AI Mentors</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>AI Mentors</b>
+                    </div>
                     <div class="multiline">
                         <p>In 2045, humans will actively interact with AI mentors. Those entities will be present in our
                             lives
@@ -655,11 +724,9 @@
             </div>
             <div class="filterDiv education">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>The rise of Immersive Education</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>The rise of Immersive Education</b>
+                    </div>
                     <div class="multiline">
                         <p>After years of disregard towards the importance of improving educational delivery, VR and
                             machine
@@ -678,11 +745,9 @@
             </div>
             <div class="filterDiv education">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Universities in their current form will cease to exist</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Universities in their current form will cease to exist</b>
+                    </div>
                     <div class="multiline">
                         <p>It is the year 2050, and education has completely moved to an on-demand format. Universities
                             in
@@ -702,11 +767,10 @@
             </div>
             <div class="filterDiv education">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>Virtual education</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>Virtual education</b>
+                    </div>
+
                     <div class="multiline">
                         <p>As more and more people all over the world gain access to the Internet, schools will be
                             slowly
@@ -726,11 +790,10 @@
             </div>
             <div class="filterDiv entertainment">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>The VR revolution comes to neural interfaces</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>The VR revolution comes to neural interfaces</b>
+                    </div>
+
                     <div class="multiline">
                         <p>VR technology has come a long way. Until the early 2020s, users had to slap on bulky helmets
                             and
@@ -749,11 +812,9 @@
             </div>
             <div class="filterDiv entertainment">
                 <div class="filterDivContainer">
-                    <h4>
-                        <div class="singleline">
-                            <b>The new era of virtual reality</b>
-                        </div>
-                    </h4>
+                    <div class="singleline">
+                        <b>The new era of virtual reality</b>
+                    </div>
                     <div class="multiline">
                         <p>While the launch of consumer-level Virtual Reality has gotten off to a slower start than some
                             (myself
@@ -772,12 +833,24 @@
             </div>
         </div>
     </section>
+    <section id="futureTransport">
+        <h2 class="fontGreen">Future Transport</h2>
+        <div class="text-medium text-blue-gray">
+            <p>Autonomous transport holds the key for the future of the mobility industry.</p>
+            <p>Zoox, Inc. is a subsidiary of Amazon developing autonomous vehicles that provide Mobility-as-a-Service.
+                Read more at <a class="text-blue-gray" href="https://zoox.com" target="_blank">Zoox</a></p>
+        </div>
+        <iframe height="600" style="width:100%; "
+            src="https://www.youtube.com/embed/pQVpjuh6tZY?playlist=pQVpjuh6tZY&loop=1&autoplay=1&controls=1&showinfo=0&mute=1"
+            title="This is Zoox" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </section>
     <section id="games">
         <h2>Games</h2>
         <div class="tab">
-            <button id="defaultOpen" class="tablinks" onclick="openGame(event, 'Game1')">Game1</button>
-            <button class="tablinks" onclick="openGame(event, 'Game2')">Game2</button>
-            <button class="tablinks" onclick="openGame(event, 'Game3')">Game3</button>
+            <button id="defaultOpen" class="tablinks" onclick="openGame(event, 'Game1')">HoverBall</button>
+            <button class="tablinks" onclick="openGame(event, 'Game2')">Superhero Dash</button>
         </div>
         <div id="Game1" class="tabcontent">
             <iframe width="660" height="408"
@@ -790,27 +863,27 @@
             <p>Game link:</p>
         </div>
 
-        <div id="Game3" class="tabcontent">
-            <h3>Game3</h3>
-            <p>Game link:</p>
-        </div>
     </section>
 
-    <section class="alt-color" id="about">
-        <h2>Credits</h2>
+    <section class="alt-color fontWhite" id="about">
+        <h2 class=" fontGreen"> About</h2>
         <p>I’m on a mission to educate kids on how much we would rely on technology in the future and raise
             awareness on future careers. Future technologies will be highly advanced, so we should know what to expect.
-            Technologies are already all around us, but in the future their will be a bigger variety. So I'm trying
-            explain to kids on what the future may hold. Jobs will also change largely. Many jobs today may not be
+            Technologies are already all around us, but in the future their will be more advanced. So I'm trying
+            explain to everyone on what the future may hold. Jobs apportunities will also change largely. Many jobs
+            today may not be
             there in the future, like doctors and teachers to truck drivers and mathmaticians. We will require help
             robots and machines so I'm wanting to show what jobs will be like in the future.</p>
-        <p>The things that helped accomplish my solution was the extraordinary site called 2050 Earth. It allows people
+        <p>The things that helped accomplish my solution was the extraordinary site called <a class="fontWhite"
+                href="https://2050.earth/" target="_blank">2050 Earth.</a> It allows people
             to learn and add predictions on the future. Some of the parts let you to look at the unique environment like
             New York in 2050. You can take a glimpse into the future.</p>
-        <p>Another one of the things that helped me was W3 schools and Khan Academy. Khan Academy helped me learn the
-            basics of Java Script and CSS. W3 schools is where I learned the important parts of a website.</p>
+        <p>I learned how to program and design from online tutorials. <a class="fontWhite"
+                href="https://www.khanacademy.org" target="_blank">Khan Academy</a> helped me learn the
+            basics of Java Script, HTML and CSS. <a class="fontWhite" href="https://www.w3schools.com"
+                target="_blank">W3 schools</a> is where I learned the important parts of a website.</p>
     </section>
-    <section id="footer"><b>#Digital Future</b> | Designed by Noah Bibin Markose</section>
+    <section id="footer"><b class="fontGreen">#Digital Future</b> | Designed by Noah Bibin Markose</section>
     </div>
     <!-- filter section Script -->
     <script>
@@ -865,13 +938,13 @@
         function scrollFunction() {
             if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 
-                document.getElementById("background-video").style.height = "109px";
+                document.getElementById("heder-video").style.height = "109px";
                 document.getElementById("navbar").style.padding = "30px 10px";
                 document.getElementById("logo").style.fontSize = "25px";
             } else {
-                document.getElementById("background-video").style.height = "209px";
+                document.getElementById("heder-video").style.height = "209px";
                 document.getElementById("navbar").style.padding = "80px 10px";
-                document.getElementById("logo").style.fontSize = "35px";
+                document.getElementById("logo").style.fontSize = "50px";
             }
         }
         function openGame(evt, gameName) {
