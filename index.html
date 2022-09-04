@@ -153,7 +153,7 @@
         }
 
         #games {
-            height: 800px;
+            height: 1000px;
         }
 
         #footer {
@@ -167,7 +167,7 @@
             float: left;
             border: 1px solid #ccc;
             background-color: #f1f1f1;
-            width: 30%;
+            width: 150px;
             height: 300px;
         }
 
@@ -196,9 +196,9 @@
             float: left;
             padding: 0px 12px;
             border: 1px solid #ccc;
-            width: 70%;
+            width: calc(100% - 150px);
             border-left: none;
-            height: 500px;
+            height: 800px;
         }
 
         /* video background */
@@ -230,7 +230,8 @@
             display: none;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: 0.3s;
-            width: 40%;
+            width: calc(50% - 20px);
+            height: 170px;
         }
 
 
@@ -261,6 +262,15 @@
         .filterBtn.active {
             background-color: #666;
             color: white;
+        }
+
+        .filterReadMoreBtn {
+            font-size: 12px;
+            padding: 8px 25px !important;
+            background-color: #05d561;
+            border-radius: 30px !important;
+            color: white;
+            text-decoration-line: none;
         }
 
         .filterDivLink {
@@ -325,6 +335,25 @@
 
         .text-blue-gray {
             color: #919499;
+        }
+
+        .tynkerContainer {
+            position: relative;
+            /*width: 100%;
+            overflow: hidden;
+            padding-top: 66.66%;
+             3:2 Aspect Ratio */
+        }
+
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -412,7 +441,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/artworks/medical-booth" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/artworks/medical-booth" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -434,7 +463,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/doctors-will-be-completely-replaced-by-robots"
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/doctors-will-be-completely-replaced-by-robots"
                         target="_blank">
                         Read more</a>
                 </div>
@@ -456,7 +485,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/artworks/surrogate" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/artworks/surrogate" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -478,7 +507,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/2050-pandemic" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/2050-pandemic" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -499,7 +528,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href=" https://2050.earth/predictions/the-nano-fabrication-age" target="_blank">
+                    <a class="filterReadMoreBtn" href=" https://2050.earth/predictions/the-nano-fabrication-age" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -522,7 +551,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/salt-water-powered-cargo-ship-debute" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/salt-water-powered-cargo-ship-debute" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -542,7 +571,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/artworks/antiviral-sputnik" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/artworks/antiviral-sputnik" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -563,7 +592,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/motorboats-floating-warehouse-systems" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/motorboats-floating-warehouse-systems" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -584,7 +613,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/vehicle-power-stations-will-be-obsolete-as-electric-cars-will-have-its-power-come-from-cloud-computing"
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/vehicle-power-stations-will-be-obsolete-as-electric-cars-will-have-its-power-come-from-cloud-computing"
                         target="_blank">
                         Read more</a>
                 </div>
@@ -608,7 +637,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/the-garbage-patch-is-shrinking-because-of-bacteria-but-do-we-have-to-stop-them"
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/the-garbage-patch-is-shrinking-because-of-bacteria-but-do-we-have-to-stop-them"
                         target="_blank">
                         Read more</a>
                 </div>
@@ -631,7 +660,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/algae-respiration-filters" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/algae-respiration-filters" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -653,7 +682,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/digital-landmarks" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/digital-landmarks" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -673,7 +702,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/victim-of-your-own-success" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/victim-of-your-own-success" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -697,7 +726,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/redefining-reality" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/redefining-reality" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -718,7 +747,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/ai-mentors" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/ai-mentors" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -739,7 +768,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/rise-of-immersive-education" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/rise-of-immersive-education" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -760,7 +789,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/universities-in-its-current-form-will-cease-to-exist"
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/universities-in-its-current-form-will-cease-to-exist"
                         target="_blank">
                         Read more</a>
                 </div>
@@ -784,7 +813,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/virtual-education" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/virtual-education" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -806,7 +835,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/artworks/the-vr-revolution-comes-to-neural-interfaces" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/artworks/the-vr-revolution-comes-to-neural-interfaces" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -827,7 +856,7 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a href="https://2050.earth/predictions/the-new-era-of-virtual-reality" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/the-new-era-of-virtual-reality" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -838,7 +867,7 @@
         <div class="text-medium text-blue-gray">
             <p>Autonomous transport holds the key for the future of the mobility industry.</p>
             <p>Zoox, Inc. is a subsidiary of Amazon developing autonomous vehicles that provide Mobility-as-a-Service.
-                Read more at <a class="text-blue-gray" href="https://zoox.com" target="_blank">Zoox</a></p>
+            <a class="filterReadMoreBtn" class="text-blue-gray" href="https://zoox.com" target="_blank">Read More</a></p>
         </div>
         <iframe height="600" style="width:100%; "
             src="https://www.youtube.com/embed/pQVpjuh6tZY?playlist=pQVpjuh6tZY&loop=1&autoplay=1&controls=1&showinfo=0&mute=1"
@@ -852,9 +881,9 @@
             <button id="defaultOpen" class="tablinks" onclick="openGame(event, 'Game1')">Catch the Coin</button>
             <button class="tablinks" onclick="openGame(event, 'Game2')">Superhero Rush</button>
         </div>
-        <div id="Game1" class="tabcontent">
-            <iframe width="660" height="408"
-                src="http://www.tynker.com/ide/v3?type=player&p=61410f644b63e10bf454582c&autoPlay=no" frameborder="0"
+        <div id="Game1" class="tabcontent tynkerContainer">
+            <iframe class="responsive-iframe"
+                src="https://www.tynker.com/ide/v3?type=player&p=61410f644b63e10bf454582c&autoPlay=yes" frameborder="0"
                 allowfullscreen></iframe>
         </div>
 
