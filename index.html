@@ -2,8 +2,12 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Glimpse of Future Technology">
+    <meta name="keywords" content="Future, 2050, 2030, Digital Future, #digitalfuturesqld">
+    <meta name="author" content="Noah Bibin Markose">
     <meta name="viewport" content="width=device, initial-scale=1">
-    <title>#DigitalFuture</title>
+    <title>Digital Future - #digitalfuturesqld</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
         * {
@@ -153,7 +157,7 @@
         }
 
         #games {
-            height: 1000px;
+            height: 700px;
         }
 
         #footer {
@@ -163,42 +167,13 @@
 
         }
 
-        .tab {
-            float: left;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-            width: 150px;
-            height: 800px;
+        .game-content {
+            height: auto !important;
         }
 
-        .tab button {
-            display: block;
-            background-color: inherit;
-            color: black;
-            padding: 22px 16px;
-            width: 100%;
-            border: none;
-            outline: none;
-            text-align: left;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .tab button:hover {
-            background-color: #ddd;
-        }
-
-        .tab button.active {
-            background-color: #ccc;
-        }
-
-        .tabcontent {
-            float: left;
-            padding: 0px 12px;
-            border: 1px solid #ccc;
-            width: calc(100% - 150px);
-            border-left: none;
-            height: 800px;
+        .game-container {
+            margin: 15px !important;
+            height: 420px;
         }
 
         /* video background */
@@ -208,7 +183,6 @@
 
         .background-video {
             width: 100vw;
-            /* height: 229px; */
             object-fit: cover;
             left: 0;
             right: 0;
@@ -339,10 +313,7 @@
 
         .tynkerContainer {
             position: relative;
-            /*width: 100%;
-            overflow: hidden;
-            padding-top: 66.66%;
-             3:2 Aspect Ratio */
+
         }
 
         .responsive-iframe {
@@ -363,7 +334,7 @@
         <source src="assets/video.mp4" type="video/mp4">
     </video>
     <div id="navbar">
-        <a href="#default" id="logo">#Digital Future</a>
+        <a href="#default" id="logo">Digital Future</a>
         <div id="navbar-right">
             <a class="link" href="#home">Home</a>
             <a class="link" href="#futureTech">Glimpse of the future</a>
@@ -420,6 +391,7 @@
             <button class="filterBtn" onclick="filterSelection('sustainability')"> Sustainability</button>
             <button class="filterBtn" onclick="filterSelection('social media')"> Social Media</button>
             <button class="filterBtn" onclick="filterSelection('entertainment')"> Entertainment</button>
+            <button class="filterBtn" onclick="filterSelection('cities')"> Future Cities</button>
         </div>
 
         <div class="filterContainer center">
@@ -463,7 +435,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/doctors-will-be-completely-replaced-by-robots"
+                    <a class="filterReadMoreBtn"
+                        href="https://2050.earth/predictions/doctors-will-be-completely-replaced-by-robots"
                         target="_blank">
                         Read more</a>
                 </div>
@@ -528,7 +501,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href=" https://2050.earth/predictions/the-nano-fabrication-age" target="_blank">
+                    <a class="filterReadMoreBtn" href=" https://2050.earth/predictions/the-nano-fabrication-age"
+                        target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -551,7 +525,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/salt-water-powered-cargo-ship-debute" target="_blank">
+                    <a class="filterReadMoreBtn"
+                        href="https://2050.earth/predictions/salt-water-powered-cargo-ship-debute" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -592,7 +567,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/motorboats-floating-warehouse-systems" target="_blank">
+                    <a class="filterReadMoreBtn"
+                        href="https://2050.earth/predictions/motorboats-floating-warehouse-systems" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -613,7 +589,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/vehicle-power-stations-will-be-obsolete-as-electric-cars-will-have-its-power-come-from-cloud-computing"
+                    <a class="filterReadMoreBtn"
+                        href="https://2050.earth/predictions/vehicle-power-stations-will-be-obsolete-as-electric-cars-will-have-its-power-come-from-cloud-computing"
                         target="_blank">
                         Read more</a>
                 </div>
@@ -637,7 +614,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/the-garbage-patch-is-shrinking-because-of-bacteria-but-do-we-have-to-stop-them"
+                    <a class="filterReadMoreBtn"
+                        href="https://2050.earth/predictions/the-garbage-patch-is-shrinking-because-of-bacteria-but-do-we-have-to-stop-them"
                         target="_blank">
                         Read more</a>
                 </div>
@@ -660,11 +638,12 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/algae-respiration-filters" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/algae-respiration-filters"
+                        target="_blank">
                         Read more</a>
                 </div>
             </div>
-            <div class="filterDiv social media">
+            <div class="filterDiv cities">
                 <div class="filterDivContainer">
                     <div class="singleline">
                         <b>Digital Landmarks</b>
@@ -682,7 +661,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/digital-landmarks" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/digital-landmarks"
+                        target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -702,7 +682,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/victim-of-your-own-success" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/victim-of-your-own-success"
+                        target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -726,7 +707,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/redefining-reality" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/redefining-reality"
+                        target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -768,7 +750,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/rise-of-immersive-education" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/rise-of-immersive-education"
+                        target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -789,7 +772,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/universities-in-its-current-form-will-cease-to-exist"
+                    <a class="filterReadMoreBtn"
+                        href="https://2050.earth/predictions/universities-in-its-current-form-will-cease-to-exist"
                         target="_blank">
                         Read more</a>
                 </div>
@@ -813,7 +797,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/virtual-education" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/virtual-education"
+                        target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -835,7 +820,8 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/artworks/the-vr-revolution-comes-to-neural-interfaces" target="_blank">
+                    <a class="filterReadMoreBtn"
+                        href="https://2050.earth/artworks/the-vr-revolution-comes-to-neural-interfaces" target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -856,7 +842,28 @@
                     </div>
                 </div>
                 <div class="filterDivLink">
-                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/the-new-era-of-virtual-reality" target="_blank">
+                    <a class="filterReadMoreBtn" href="https://2050.earth/predictions/the-new-era-of-virtual-reality"
+                        target="_blank">
+                        Read more</a>
+                </div>
+            </div>
+            <div class="filterDiv cities">
+                <div class="filterDivContainer">
+                    <div class="singleline">
+                        <b>Future Cities</b>
+                    </div>
+                    <div class="multiline">
+                        <p>
+                            Discover what our homes, transport and lives might look like in 30 years’ time. Currently,
+                            around half of the world’s population live in cities – but by 2050 they’re set to become
+                            even more crowded, with an additional 2.5 billion people!
+                        </p>
+                    </div>
+                </div>
+                <div class="filterDivLink">
+                    <a class="filterReadMoreBtn"
+                        href="https://www.natgeokids.com/au/discover/science/general-science/future-cities/"
+                        target="_blank">
                         Read more</a>
                 </div>
             </div>
@@ -867,7 +874,9 @@
         <div class="text-medium text-blue-gray">
             <p>Autonomous transport holds the key for the future of the mobility industry.</p>
             <p>Zoox, Inc. is a subsidiary of Amazon developing autonomous vehicles that provide Mobility-as-a-Service.
-            <a class="filterReadMoreBtn" class="text-blue-gray" href="https://zoox.com" target="_blank">Read More</a></p>
+                <a class="filterReadMoreBtn" class="text-blue-gray" href="https://zoox.com" target="_blank">Read
+                    More</a>
+            </p>
         </div>
         <iframe height="600" style="width:100%; "
             src="https://www.youtube.com/embed/pQVpjuh6tZY?playlist=pQVpjuh6tZY&loop=1&autoplay=1&controls=1&showinfo=0&mute=1"
@@ -877,21 +886,23 @@
     </section>
     <section id="games">
         <h2>Games</h2>
-        <div class="tab">
-            <button id="defaultOpen" class="tablinks" onclick="openGame(event, 'Game1')">Catch the Coin</button>
-            <button class="tablinks" onclick="openGame(event, 'Game2')">Superhero Rush</button>
-        </div>
-        <div id="Game1" class="tabcontent tynkerContainer">
-            <iframe class="responsive-iframe"
-                src="https://www.tynker.com/ide/v3?type=player&p=61410f644b63e10bf454582c&autoPlay=yes" frameborder="0"
-                allowfullscreen></iframe>
-        </div>
 
-        <div id="Game2" class="tabcontent">
-            <h3>Game2</h3>
-            <p>Game link:</p>
+        <div class="filterContainer center">
+            <div class="filterDiv game-content">
+                <div class="filterDivContainer game-container">
+                    <iframe width="660" height="408"
+                        src="https://www.tynker.com/ide/v3?type=player&p=6270499b6c339c6683217da3&autoPlay=yes"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="filterDiv game-content">
+                <div class="filterDivContainer game-container">
+                    <iframe width="660" height="408"
+                        src="https://www.tynker.com/ide/v3?type=player&p=62d9cb3b96b275473915cc02&autoPlay=yes"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-
     </section>
 
     <section class="alt-color fontWhite" id="about">
@@ -912,7 +923,7 @@
             basics of Java Script, HTML and CSS. <a class="fontWhite" href="https://www.w3schools.com"
                 target="_blank">W3 schools</a> is where I learned the important parts of a website.</p>
     </section>
-    <section id="footer"><b class="fontGreen">#Digital Future</b> | Designed by Noah Bibin Markose</section>
+    <section id="footer"><b class="fontGreen">#digitalfuturesqld</b> | Designed by Noah Bibin Markose</section>
     </div>
     <!-- filter section Script -->
     <script>
@@ -961,7 +972,7 @@
     </script>
     <!-- website video and header -->
     <script>
-        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
@@ -976,20 +987,7 @@
                 document.getElementById("logo").style.fontSize = "50px";
             }
         }
-        function openGame(evt, gameName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(gameName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-        document.getElementById("defaultOpen").click();
+
     </script>
 </body>
 
