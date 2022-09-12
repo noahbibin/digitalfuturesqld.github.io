@@ -30,7 +30,7 @@
             font-family: 'Montserrat', sans-serif !important;
         }
 
-        /* heading */
+
         h1,
         h2,
         h3,
@@ -191,7 +191,6 @@
             height: 420px;
         }
 
-        /* video background */
         #heder-video {
             position: fixed;
         }
@@ -210,8 +209,6 @@
             text-align: center;
             text-transform: uppercase;
         }
-
-        /*    Filter area          */
 
         .filterDiv {
             float: left;
@@ -234,9 +231,7 @@
             overflow: hidden;
 
         }
-
-        /* Style the buttons */
-        .filterBtn {
+               .filterBtn {
             border: none;
             outline: none;
             padding: 12px 16px;
@@ -331,16 +326,6 @@
 
         }
 
-        .responsive-iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
     </style>
 </head>
 
@@ -944,7 +929,6 @@
     </section>
     <section id="footer"><b class="fontGreen">#digitalfuturesqld</b> | Designed by Noah Bibin Markose</section>
     </div>
-    <!-- filter section Script -->
     <script>
         filterSelection("all")
         function filterSelection(c) {
@@ -952,12 +936,12 @@
             x = document.getElementsByClassName("filterDiv");
             if (c == "all") c = "";
             for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "filterShow");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "filterShow");
+                removeClass(x[i], "filterShow");
+                if (x[i].className.indexOf(c) > -1) addClass(x[i], "filterShow");
             }
         }
 
-        function w3AddClass(element, name) {
+        function addClass(element, name) {
             var i, arr1, arr2;
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
@@ -966,7 +950,7 @@
             }
         }
 
-        function w3RemoveClass(element, name) {
+        function removeClass(element, name) {
             var i, arr1, arr2;
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
@@ -978,7 +962,6 @@
             element.className = arr1.join(" ");
         }
 
-        // Add active class to the current button (highlight it)
         var btnContainer = document.getElementById("myBtnContainer");
         var btns = btnContainer.getElementsByClassName("filterBtn");
         for (var i = 0; i < btns.length; i++) {
@@ -989,7 +972,6 @@
             });
         }
     </script>
-    <!-- website video and header -->
     <script>
 
         window.onscroll = function () { scrollFunction() };
