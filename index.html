@@ -383,7 +383,7 @@
     <section class="alt-color" id="futureTech">
         <h2 class="fontGreen">Glimpse of the future</h2>
 
-        <div id="myBtnContainer" class="center btnContainer">
+        <div id="btnContainer" class="center btnContainer">
             <button class="filterBtn active" onclick="filterSelection('all')"> All</button>
             <button class="filterBtn" onclick="filterSelection('education')"> Education</button>
             <button class="filterBtn" onclick="filterSelection('medical')"> Medical</button>
@@ -962,7 +962,7 @@
             element.className = arr1.join(" ");
         }
 
-        var btnContainer = document.getElementById("myBtnContainer");
+        var btnContainer = document.getElementById("btnContainer");
         var btns = btnContainer.getElementsByClassName("filterBtn");
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function () {
